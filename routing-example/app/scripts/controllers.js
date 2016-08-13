@@ -2,7 +2,8 @@
  * Created by tntdi_000 on 8/11/2016.
  */
 
-angular.module('fifaApp')
+angular
+    .module('fifaApp')
     .controller('MainCtrl', ['UserService', function(UserService) {
         var self = this;
         self.userService = UserService;
