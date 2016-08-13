@@ -24,7 +24,10 @@
                         template: '<h5>This is the default route</h5>'
                     })
                     .when('/second', {
-                        template: '<h5>This is the second route</h5>'
+                        template: '<h5>This is the second route</h5>',
+                        controller: ['$window', function($window) {
+                            $window.alert('Second route has been loaded!');
+                        }]
                     })
                     .otherwise({redirectTo: '/'});
         }]);
